@@ -16,7 +16,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-
+from .views import GoogleSingin
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/google-signin', GoogleSingin.as_view(), name='google-signin')
 ]
